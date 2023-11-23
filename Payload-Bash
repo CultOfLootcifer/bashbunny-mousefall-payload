@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Title: Mouse Fall
+# Author: Your Name
+# Description: Each time the user tries to move the mouse up, it moves down slightly.
+# Category: Prank
+# Target: Windows
+# Attackmode: HID
+
+# The HID attack mode simulates a human interface device (like a keyboard or mouse)
+
+# Wait for the target system to initialize with the Bash Bunny
+LED SETUP
+ATTACKMODE HID
+Q DELAY 3000
+
+# Infinite loop to cause the mouse to move down
+while true; do
+    Q MOVE_UP 10
+    Q DELAY 100
+    Q MOVE_DOWN 20
+    Q DELAY 100
+done
